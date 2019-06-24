@@ -14,9 +14,7 @@ export class ContactService {
      $key: new FormControl(null),
      firstName: new FormControl('', Validators.required),
      surname: new FormControl('', Validators.required),
-     phoneNumber: new FormControl('', [Validators.required, Validators.minLength(8)]),
-     email: new FormControl('',Validators.email),
-     location: new FormControl('')
+     phoneNumber: new FormControl('', [Validators.required, Validators.minLength(8)])
     });
 getContacts(){
                  this.contactList = this.firebase.list('contact');
